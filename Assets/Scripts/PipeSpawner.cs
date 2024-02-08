@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PipeSpawner : MonoBehaviour
 {
-    public GameObject Pipe;
+    public  GameObject [] PipeArr;
     [HideInInspector] public float PipeDelay = 5;
     [HideInInspector] public float timer = 0;
 
@@ -14,6 +14,7 @@ public class PipeSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PipeArr = new GameObject[2];
         SpawnPipe(true);
         SpawnPipes = true;
     }
@@ -32,13 +33,13 @@ public class PipeSpawner : MonoBehaviour
         if (SpawnPipes){
 
             if (firstime){
-            Instantiate(Pipe,transform.position,transform.rotation);
+            Instantiate(PipeArr[0],transform.position,transform.rotation);
             }
             else{
                 if (timer < PipeDelay){
                     timer += Time.deltaTime;
                 }else{
-                        Instantiate(Pipe,new Vector3(transform.position.x,Random.Range(-3.63f,HeighestSpawnPoint),0),transform.rotation);
+                        Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-3.63f,HeighestSpawnPoint),0),transform.rotation);
                     timer = 0;
                 }
             }

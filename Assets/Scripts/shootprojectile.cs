@@ -15,7 +15,7 @@ public class shootprojectale : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
-            Instantiate(Arrow,transform.position,transform.rotation);
+        if (Input.GetKeyDown(KeyCode.F))
+            Instantiate(Arrow,new Vector3(transform.position.x + 2f,transform.position.y, transform.position.z),transform.rotation);
     }
 }

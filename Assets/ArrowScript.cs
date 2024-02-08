@@ -23,7 +23,7 @@ public class ArrowScript : MonoBehaviour
     {
         if (!ArrowCollided)
             ArrowRidgidBody.velocity += Vector2.right * projectileSpeed;
-        else if (!ArrowCollided && transform.position.x >= WorldLimit)
+        if (transform.position.x >= WorldLimit)
             Destroy(gameObject,0.2f);
     }
 
