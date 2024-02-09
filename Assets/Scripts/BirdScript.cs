@@ -6,6 +6,11 @@ public class BirdScript : MonoBehaviour
 {
 
      public Rigidbody2D BirdRidigdbody;
+
+     public GameObject BirdWing;
+
+     public Animator WingAnimator;
+
      [HideInInspector] public float flightFroce = 10.00f;
 
      [HideInInspector] public bool isgameover = false;
@@ -31,9 +36,13 @@ public class BirdScript : MonoBehaviour
          if (Input.GetKeyDown(KeyCode.Space) && !isgameover){
             BirdRidigdbody.velocity = Vector2.up * flightFroce;
             BirdRidigdbody.rotation += 20;
+            WingAnimator.SetBool("Flaped",true);
         }
         if (BirdRidigdbody.rotation > 0)
             BirdRidigdbody.rotation --;
+
+        if (BirdRidigdbody.rotation <= 0)
+            WingAnimator.SetBool("Flaped",false);
     }
     
 }

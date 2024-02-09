@@ -8,7 +8,7 @@ using TMPro;
 public class GameLogic : MonoBehaviour
 {
 
-     public Text Score;
+    //  public Text Score;
 
      public TMP_Text ScoreMeshed;
     [HideInInspector] public int score = 0;
@@ -29,7 +29,7 @@ public class GameLogic : MonoBehaviour
     
     public void AddScore(){
         ++score;
-        Score.text = score.ToString();
+        // Score.text = score.ToString();
         ScoreMeshed.text = score.ToString();
     }
 

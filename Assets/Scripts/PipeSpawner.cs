@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PipeSpawner : MonoBehaviour
 {
-    public  GameObject [] PipeArr;
+    public  GameObject [] PipeArr = new GameObject[2];
     [HideInInspector] public float PipeDelay = 5;
     [HideInInspector] public float timer = 0;
 
@@ -14,7 +14,7 @@ public class PipeSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PipeArr = new GameObject[2];
+        // PipeArr = new GameObject[2];
         SpawnPipe(true);
         SpawnPipes = true;
     }
@@ -43,7 +43,6 @@ public class PipeSpawner : MonoBehaviour
                     timer = 0;
                 }
             }
-            
         }
     }
 }

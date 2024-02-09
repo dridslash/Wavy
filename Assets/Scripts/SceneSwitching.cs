@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitching : MonoBehaviour
 {
+
+
+    void Start(){
+        Time.timeScale = 1;
+    }
+
     public void SwitchScene(){
         SceneManager.LoadScene("GameLoop");
     }
