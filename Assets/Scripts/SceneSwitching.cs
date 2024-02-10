@@ -14,9 +14,12 @@ public class SceneSwitching : MonoBehaviour
 
     public void SwitchScene(){
         SceneManager.LoadScene("GameLoop");
+        FindAnyObjectByType<AudioManager>().PlaySound("ButtonClick");
     }
 
     public void SwitchToMenu(){
         SceneManager.LoadScene("HomeMenu");
+        FindAnyObjectByType<AudioManager>().PlaySound("Theme");
+        FindAnyObjectByType<AudioManager>().PlaySound("ButtonClick");
     }
 }

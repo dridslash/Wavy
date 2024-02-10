@@ -7,8 +7,6 @@ public class BirdScript : MonoBehaviour
 
      public Rigidbody2D BirdRidigdbody;
 
-     public GameObject BirdWing;
-
      public Animator WingAnimator;
 
      [HideInInspector] public float flightFroce = 10.00f;
@@ -18,6 +16,7 @@ public class BirdScript : MonoBehaviour
      [HideInInspector] public GameLogic gamelogic;
 
      [HideInInspector] public PipeSpawner pipespawner;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +35,7 @@ public class BirdScript : MonoBehaviour
          if (Input.GetKeyDown(KeyCode.Space) && !isgameover){
             BirdRidigdbody.velocity = Vector2.up * flightFroce;
             BirdRidigdbody.rotation += 20;
+            FindAnyObjectByType<AudioManager>().PlaySound("PlayerFlying");
             WingAnimator.SetBool("Flaped",true);
         }
         if (BirdRidigdbody.rotation > 0)

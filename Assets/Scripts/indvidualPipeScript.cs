@@ -30,6 +30,8 @@ public class indvidualPipeScript : MonoBehaviour
             Debug.Log("I hit A BIIIIIIRD!!!");
             Birdobj.BirdRidigdbody.constraints = (RigidbodyConstraints2D) RigidbodyConstraints.FreezeAll;
             gamelogic.ActiveGameOver();
+            FindAnyObjectByType<AudioManager>().StopSound("Theme");
+            FindAnyObjectByType<AudioManager>().PlaySound("Lose");
             pipespawner.SpawnPipes = false;
             Birdobj.isgameover = true;
             Time.timeScale = 0;

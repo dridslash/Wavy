@@ -35,6 +35,8 @@ public class GameLogic : MonoBehaviour
 
     public void GameOver(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        FindAnyObjectByType<AudioManager>().PlaySound("Theme");
+        FindAnyObjectByType<AudioManager>().PlaySound("ButtonClick");
     }
 
     [ContextMenu("Testing Active Game Over")]

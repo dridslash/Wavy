@@ -22,6 +22,8 @@ public class WorldLimitScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.layer == 3){
             gamelogic.ActiveGameOver();
+            FindAnyObjectByType<AudioManager>().StopSound("Theme");
+            FindAnyObjectByType<AudioManager>().PlaySound("Lose");
             Time.timeScale = 0;
         }
     }

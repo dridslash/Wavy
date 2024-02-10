@@ -10,6 +10,7 @@ TagManager:
   - TopPipe
   - Arrow
   - Gate
+  - AudioManager
   layers:
   - Default
   - TransparentFX
@@ -46,4 +47,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackLayer
+    uniqueID: 334901363
+    locked: 0
+  - name: FrontLayer
+    uniqueID: 393813257
     locked: 0
