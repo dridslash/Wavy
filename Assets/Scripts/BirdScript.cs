@@ -34,7 +34,7 @@ public class BirdScript : MonoBehaviour
     public void BirdMovement(){
          if (Input.GetKeyDown(KeyCode.Space) && !isgameover){
             BirdRidigdbody.velocity = Vector2.up * flightFroce;
-            BirdRidigdbody.rotation += 20;
+            BirdRidigdbody.rotation += 14;
             FindAnyObjectByType<AudioManager>().PlaySound("PlayerFlying");
             WingAnimator.SetBool("Flaped",true);
         }

@@ -11,6 +11,8 @@ public class GameLogic : MonoBehaviour
     //  public Text Score;
 
      public TMP_Text ScoreMeshed;
+
+     public TMP_Text LatestScore;
     [HideInInspector] public int score = 0;
     
     public GameObject GameOverManager;
@@ -20,6 +22,7 @@ public class GameLogic : MonoBehaviour
     {
         score = 0;
         GameOverManager.SetActive(false);
+        LatestScore.text = "Highest Score : " + GetLatestScore().ToString();
     }
 
     // Update is called once per frame
@@ -31,6 +34,7 @@ public class GameLogic : MonoBehaviour
         ++score;
         // Score.text = score.ToString();
         ScoreMeshed.text = score.ToString();
+        SetLatestScore(score);
     }
 
     public void GameOver(){
@@ -42,5 +46,13 @@ public class GameLogic : MonoBehaviour
     [ContextMenu("Testing Active Game Over")]
     public void ActiveGameOver(){
         GameOverManager.SetActive(true);
+    }
+
+    public void SetLatestScore(int score){
+        PlayerPrefs.SetInt("sc",score);
+    }
+
+    public int GetLatestScore(){
+        return PlayerPrefs.GetInt("sc");
     }
 }

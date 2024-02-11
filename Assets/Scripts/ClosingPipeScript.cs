@@ -5,7 +5,7 @@ using UnityEngine;
 public class ClosingPipeScript : MonoBehaviour
 {
 
-    private float speed = 2.0f;
+    private float speed = 5f;
     public GameObject upperpipe;
 
     private bool GateClosed = false;
@@ -37,7 +37,7 @@ public class ClosingPipeScript : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.tag.Equals("TopPipe")){
+        if (other.gameObject.tag.Equals("Gate")){
             GateClosed = true;
         }
 

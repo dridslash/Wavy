@@ -33,6 +33,7 @@ public class indvidualPipeScript : MonoBehaviour
             FindAnyObjectByType<AudioManager>().StopSound("Theme");
             FindAnyObjectByType<AudioManager>().PlaySound("Lose");
             pipespawner.SpawnPipes = false;
+            pipespawner.Tier = 0;
             Birdobj.isgameover = true;
             Time.timeScale = 0;
         }

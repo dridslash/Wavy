@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PipeMovement : MonoBehaviour
 {
-    [HideInInspector] public float PipeMovementSpeed = 5;
+    [HideInInspector] public float PipeMovementSpeed;
     [HideInInspector] public float ScreenEdge = -25.77f;
+
     
     // Start is called before the first frame update
     void Start()
@@ -19,5 +20,9 @@ public class PipeMovement : MonoBehaviour
         if (transform.position.x < ScreenEdge)
             Destroy(gameObject);
         
+    }
+
+    public void SetMovementSpeed(float speed){
+        PipeMovementSpeed = speed;
     }
 }
