@@ -10,7 +10,7 @@ public class PipeSpawner : MonoBehaviour
 
     [HideInInspector] public float Tier = 0;
 
-    [HideInInspector] public float SpawnOffset = 6f;
+    [HideInInspector] public float SpawnOffset = 2.5f;
 
     [HideInInspector] public bool SpawnPipes = true;
 
@@ -61,30 +61,30 @@ public class PipeSpawner : MonoBehaviour
         float HeighestSpawnPoint = transform.position.y + SpawnOffset;
         if (Tier >= 4 && Tier <= 10){
                 Set_Speed_Delay_By_Difficulty(5,2);
-                Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-3.63f,HeighestSpawnPoint),0),transform.rotation);
+                Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-2.2f,4.96f),0),transform.rotation);
             }
             else if (Tier >= 12 && Tier <= 30){
                 Set_Speed_Delay_By_Difficulty(6,0);
                 if (Random_Spanwer == 0)
-                    Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-3.63f,HeighestSpawnPoint),0),transform.rotation);
+                    Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-2.2f,4.96f),0),transform.rotation);
                 else if (Random_Spanwer == 1)
                     Instantiate(PipeArr[2],transform.position,transform.rotation);
                 else
-                    Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-3.63f,HeighestSpawnPoint),0),transform.rotation);
+                    Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-2.2f,4.96f),0),transform.rotation);
             }
             else if (Tier >= 30 && Tier <= 50){
-                Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-3.63f,HeighestSpawnPoint),0),transform.rotation);
+                Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-2.2f,4.96f),0),transform.rotation);
             }
             else if (Tier >= 50){
                 Set_Speed_Delay_By_Difficulty(7,0);
                 if (Random_Spanwer == 0)
-                    Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-3.63f,HeighestSpawnPoint),0),transform.rotation);
+                    Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-2.2f,4.96f),0),transform.rotation);
                 else if (Random_Spanwer == 1)
                     Instantiate(PipeArr[2],transform.position,transform.rotation);
                 else if (Random_Spanwer == 2)
                     Instantiate(PipeArr[1],transform.position,transform.rotation);
                 else
-                    Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-3.63f,HeighestSpawnPoint),0),transform.rotation);
+                    Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-2.2f,4.96f),0),transform.rotation);
             }
     }
     

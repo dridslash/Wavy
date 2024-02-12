@@ -22,7 +22,7 @@ public class GameLogic : MonoBehaviour
     {
         score = 0;
         GameOverManager.SetActive(false);
-        LatestScore.text = "Highest Score : " + GetLatestScore().ToString();
+        LatestScore.text = "Latest Score : " + GetLatestScore().ToString();
     }
 
     // Update is called once per frame

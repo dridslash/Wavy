@@ -5,7 +5,7 @@ using UnityEngine;
 public class ClosingPipeScript : MonoBehaviour
 {
 
-    private float speed = 5f;
+    private float speed = 3.5f;
     public GameObject upperpipe;
 
     private bool GateClosed = false;
@@ -26,7 +26,8 @@ public class ClosingPipeScript : MonoBehaviour
     void Update()
     {
         if(!GateClosed && GateFrozed == false)
-            transform.position = Vector3.MoveTowards(transform.position,upperpipe.transform.position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position,new Vector3(transform.position.x,
+            upperpipe.transform.position.y,transform.position.z), speed * Time.deltaTime);
         else if (GateClosed == true && GateFrozed == false){
                 transform.position = Vector3.MoveTowards(transform.position,new Vector3(transform.position.x,first_position,transform.position.z)
                     , speed * Time.deltaTime);

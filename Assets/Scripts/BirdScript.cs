@@ -7,7 +7,7 @@ public class BirdScript : MonoBehaviour
 
      public Rigidbody2D BirdRidigdbody;
 
-     public Animator WingAnimator;
+    //  public Animator WingAnimator;
 
      [HideInInspector] public float flightFroce = 10.00f;
 
@@ -36,13 +36,13 @@ public class BirdScript : MonoBehaviour
             BirdRidigdbody.velocity = Vector2.up * flightFroce;
             BirdRidigdbody.rotation += 14;
             FindAnyObjectByType<AudioManager>().PlaySound("PlayerFlying");
-            WingAnimator.SetBool("Flaped",true);
+            // WingAnimator.SetBool("Flaped",true);
         }
         if (BirdRidigdbody.rotation > 0)
             BirdRidigdbody.rotation --;
 
-        if (BirdRidigdbody.rotation <= 0)
-            WingAnimator.SetBool("Flaped",false);
+        // if (BirdRidigdbody.rotation <= 0)
+            // WingAnimator.SetBool("Flaped",false);
     }
     
 }
