@@ -17,7 +17,7 @@ public class shootprojectale : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F)){
             FindAnyObjectByType<AudioManager>().PlaySound("arrowshot");
-            Instantiate(Arrow,new Vector3(transform.position.x + 2f,transform.position.y, transform.position.z),transform.rotation);
+            Instantiate(Arrow,new Vector3(transform.position.x + 2f,transform.position.y - 0.5f, transform.position.z),transform.rotation);
         }
     }
 }

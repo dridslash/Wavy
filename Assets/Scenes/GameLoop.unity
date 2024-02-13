@@ -670,7 +670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -342, y: -120}
+  m_AnchoredPosition: {x: -380, y: -120}
   m_SizeDelta: {x: 82243.95, y: 75867.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132613350
@@ -906,7 +906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 414, y: -120}
+  m_AnchoredPosition: {x: 266, y: -120}
   m_SizeDelta: {x: 86745.41, y: 80020.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1271824491
@@ -1313,6 +1313,7 @@ MonoBehaviour:
   - {fileID: 8211834340451562103, guid: 1f2b34892832ea74fb696996aa6854b7, type: 3}
   - {fileID: 4028122957887301257, guid: f0d89dd59d94f9a4a874500bfc727a59, type: 3}
   - {fileID: 2420844601099495243, guid: ac67865b0e3c6b64585e9fe3ae3d543d, type: 3}
+  Rock: {fileID: 4228113183963044068, guid: 2156b81551ca23e4f90e6369086e4d03, type: 3}
   PipeDelay: 5
   timer: 0
   Tier: 0
@@ -1679,7 +1680,7 @@ Transform:
   m_GameObject: {fileID: 1609888727}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.77, y: -0.12, z: 0}
+  m_LocalPosition: {x: -6.77, y: -1.62, z: 0}
   m_LocalScale: {x: 0.87259966, y: 0.87259966, z: 0.87259966}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1848,7 +1849,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 209, y: 0}
+  m_AnchoredPosition: {x: 102, y: 0}
   m_SizeDelta: {x: 1281.5336, y: 220.2672}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1853812359

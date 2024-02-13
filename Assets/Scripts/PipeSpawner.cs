@@ -5,6 +5,8 @@ using UnityEngine;
 public class PipeSpawner : MonoBehaviour
 {
     public  GameObject [] PipeArr;
+
+    public GameObject Rock;
     [HideInInspector] public float PipeDelay;
     [HideInInspector] public float timer = 0;
 
@@ -50,6 +52,7 @@ public class PipeSpawner : MonoBehaviour
 
     public void Set_Speed_Delay_By_Difficulty(float speed, float delay){
         PipeDelay = delay;
+        Rock.GetComponent<RockScript>().SetMovementSpeed(speed);
         foreach(GameObject pipe in PipeArr){
             pipe.GetComponent<PipeMovement>().SetMovementSpeed(speed);
         }
@@ -69,6 +72,8 @@ public class PipeSpawner : MonoBehaviour
                     Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-2.2f,4.96f),0),transform.rotation);
                 else if (Random_Spanwer == 1)
                     Instantiate(PipeArr[2],transform.position,transform.rotation);
+                else if (Random_Spanwer == 3)
+                    Instantiate(Rock,new Vector3(transform.position.x,Random.Range(6.12f,-2.00f),0),transform.rotation);
                 else
                     Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-2.2f,4.96f),0),transform.rotation);
             }
@@ -83,6 +88,8 @@ public class PipeSpawner : MonoBehaviour
                     Instantiate(PipeArr[2],transform.position,transform.rotation);
                 else if (Random_Spanwer == 2)
                     Instantiate(PipeArr[1],transform.position,transform.rotation);
+                else if (Random_Spanwer == 3)
+                    Instantiate(Rock,new Vector3(transform.position.x,Random.Range(6.12f,-2.00f),0),transform.rotation);
                 else
                     Instantiate(PipeArr[0],new Vector3(transform.position.x,Random.Range(-2.2f,4.96f),0),transform.rotation);
             }

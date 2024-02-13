@@ -22,4 +22,10 @@ public class SceneSwitching : MonoBehaviour
         FindAnyObjectByType<AudioManager>().PlaySound("Theme");
         FindAnyObjectByType<AudioManager>().PlaySound("ButtonClick");
     }
+
+    public void QuitGame(){
+        Application.Quit();
+        FindAnyObjectByType<AudioManager>().PlaySound("ButtonClick");
+        Debug.Log("Quiting");
+    }
 }
