@@ -30,9 +30,7 @@ public class ArrowScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         FindAnyObjectByType<AudioManager>().PlaySound("Arrowcollision");
-        // if (other.gameObject.tag.Equals("Gate")){
             ArrowCollided = true;
             Destroy(gameObject,0.5f);
-        // }
     }
 }
