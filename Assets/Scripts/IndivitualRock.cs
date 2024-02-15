@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class IndivitualRock : MonoBehaviour
 {
-//    [HideInInspector] public Rigidbody2D PipeRidgidBody;
     [HideInInspector] public GameLogic gamelogic;
 
     [HideInInspector] public PipeSpawner pipespawner;
@@ -13,7 +12,6 @@ public class IndivitualRock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // PipeRidgidBody = GetComponent<Rigidbody2D>();
         gamelogic = GameObject.FindGameObjectWithTag("GameLogic").GetComponent<GameLogic>();
         pipespawner = GameObject.FindGameObjectWithTag("PipeSpawner").GetComponent<PipeSpawner>();
         Birdobj = GameObject.FindGameObjectWithTag("Bird").GetComponent<BirdScript>();
