@@ -8,8 +8,6 @@ using TMPro;
 public class GameLogic : MonoBehaviour
 {
 
-    //  public Text Score;
-
      public TMP_Text ScoreMeshed;
 
      public TMP_Text LatestScore;
@@ -32,7 +30,6 @@ public class GameLogic : MonoBehaviour
     
     public void AddScore(){
         ++score;
-        // Score.text = score.ToString();
         ScoreMeshed.text = score.ToString();
         SetLatestScore(score);
     }
